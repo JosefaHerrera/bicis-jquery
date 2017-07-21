@@ -23,7 +23,10 @@ function validateForm(){
                     $("#mensaje2").fadeIn("slow");
                     return false;
                 }
-                
+                else{
+                    $("#mensaje2").fadeOut();
+                    
+                }
     });
 }
 
