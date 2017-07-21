@@ -25,7 +25,14 @@ function validateForm(){
                 }
                 else{
                     $("#mensaje2").fadeOut();
-                    
+                    if(correo == "" || !expr.test(correo)){
+        				$("#mensaje3").fadeIn("slow");
+        				////al tener el valor false , es que no esta validando el contenido como lo hace true.
+            			return false;
+        			 }else{
+        			 	$("#mensaje3").fadeOut();
+        			 	
+        			 }
                 }
     });
 }
