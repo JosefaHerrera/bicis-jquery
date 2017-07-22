@@ -31,7 +31,14 @@ function validateForm(){
             			return false;
         			 }else{
         			 	$("#mensaje3").fadeOut();
-        			 	
+        			 	if( pwd == ""){
+        			 		$("#mensaje4").fadeIn("slow");
+        			 	}else if( pwd == 123456 || pwd == 098765){
+        			 		$("#mensaje4").fadeOut();
+        			 		$("#mensaje5").fadeIn("slow");
+        			 	}else{
+        			 		$("#mensaje5").fadeOut();
+        			 	}
         			 }
                 }
     });
