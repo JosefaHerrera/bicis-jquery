@@ -38,6 +38,7 @@ function validateForm(){
         			 		$("#mensaje5").fadeIn("slow");
         			 	}else{
         			 		$("#mensaje5").fadeOut();
+        			 		$("#mensaje4").fadeOut();
         			 	}
         			 }
                 }
