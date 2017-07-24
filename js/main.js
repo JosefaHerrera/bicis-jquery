@@ -11,6 +11,7 @@ function validateForm(){
     var apellido = $("#lastname").val();
     var correo = $("#input-email").val();
     var pwd = $("#input-password").val();
+    var largoPass = pwd.length;
     //fadeIn(); hace un tipo de animacion de opacidad 0% a 100%
     if(nombre == ""){
         $("#mensaje1").fadeIn("slow");
@@ -33,7 +34,7 @@ function validateForm(){
         			 	$("#mensaje3").fadeOut();
         			 	if( pwd == ""){
         			 		$("#mensaje4").fadeIn("slow");
-        			 	}else if( pwd == 123456 || pwd == 098765){
+        			 	}else if(largoPass < 6 || pwd == 123456 || pwd == 098765 || pwd == 'password'){
         			 		$("#mensaje4").fadeOut();
         			 		$("#mensaje5").fadeIn("slow");
         			 	}else{
